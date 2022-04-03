@@ -64,6 +64,9 @@ static Key keys[] = {
 /* keybinds */
 	/* modifier                     key        function        argument */
 
+	{ MODKEY|ShiftMask,				XK_o,		spawn,			SHCMD("amixer set Master 10%-; pkill -RTMIN+10 dwmblocks") },
+	{ MODKEY,						XK_o,		spawn,			SHCMD("amixer set Master 10%+; pkill -RTMIN+10 dwmblocks") },
+
 	{ MODKEY,						XK_f,		spawn,			SHCMD("st" " -e lf") },
 	{ MODKEY,						XK_d,		spawn,			SHCMD("st" " -e nvim") },
 	{ MODKEY,						XK_x,		spawn,			SHCMD("st" " -e alsamixer") },
